@@ -1,4 +1,4 @@
-package com.giko.ems;
+package com.mycompany;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

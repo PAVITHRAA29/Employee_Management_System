@@ -1,7 +1,7 @@
-package com.giko.ems.service;
+package com.mycompany.service;
 
-import com.giko.ems.model.Employee;
-import com.giko.ems.repository.EmployeeRepository;
+import com.mycompany.model.Employee;
+import com.mycompany.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -21,7 +21,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public List<Employee> getAllEmployees() {
-        return employeeRepository.findAll(Sort.by("department").ascending());
+        return employeeRepository.findAll(Sort.by("id").ascending());
     }
 
     @Override
@@ -51,7 +51,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Page<Employee> findPaginated(int pageNumber, int pageSize, String sortField, String sortDirection) {
         Sort sort = sortDirection.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortField).ascending()
-                : Sort.by(sortField).descending();
+             : Sort.by(sortField).descending();
 
         Pageable pageable = PageRequest.of(pageNumber - 1, pageSize, sort);
         return this.employeeRepository.findAll(pageable);

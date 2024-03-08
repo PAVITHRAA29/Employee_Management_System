@@ -1,6 +1,6 @@
-package com.giko.ems.service;
+package com.mycompany.service;
 
-import com.giko.ems.model.Employee;
+import com.mycompany.model.Employee;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
@@ -12,5 +12,4 @@ public interface EmployeeService {
     void saveEmployee(Employee employee);
     void deleteEmployeeById(long id);
     Page<Employee> findPaginated(int pageNo, int pageSize, String sortField, String sortDirection);
-
 }

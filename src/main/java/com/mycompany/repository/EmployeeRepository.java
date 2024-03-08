@@ -1,6 +1,6 @@
-package com.giko.ems.repository;
+package com.mycompany.repository;
 
-import com.giko.ems.model.Employee;
+import com.mycompany.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
